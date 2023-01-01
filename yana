@@ -1,0 +1,23 @@
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <p id="question">Can you give me one more chance?</p>
+            <button class="btn" id="Yes">yes</button>
+            <button class="btn" id="No">No</button>
+        </div>
+    </div>
+</body>
+<script>
+    const noBtn = document.getElementById('No');
+    const yesBtn = document.getElementById('Yes');
+    const ques = document.getElementById('question');
+    noBtn.addEventListener("clcik", ()=>{
+        let rand = Math.floor(Math.random() * (500 - 100) + 1);
+        let rand2 = Math.floor(Math.random() * (-300 - 100) + 1);
+        noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+    });
+    yesBtn.addEventListener("click", ()=>{
+        ques.innerHTML = "I LOVE YOU SO MUCH <3"
+    })
+</script>
+</html>
